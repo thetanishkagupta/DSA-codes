@@ -15,9 +15,10 @@ while left <= right:
         print("Element found at index: ",mid)
         found = 1
         break
-    elif data < arr[mid]:
-        right = mid - 1 
-    elif data > arr[mid]:
-        left = mid + 1
+    else:
+        if data < arr[mid]:
+            right = mid - 1 
+        elif data > arr[mid]:
+            left = mid + 1
 if found == 0:        
     print("data is not present")        
