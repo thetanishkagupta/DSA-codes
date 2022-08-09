@@ -1,3 +1,4 @@
+# Iterative Approach
 class Solution(object):
     def reverseList(self, head):
         prev = None
@@ -10,4 +11,3 @@ class Solution(object):
             curr = next
         head = prev
         return head
-        
