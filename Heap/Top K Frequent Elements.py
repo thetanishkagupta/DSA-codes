@@ -1,3 +1,4 @@
+# Leetcode solution
 '''
 k = 2
 1 1 1 3 2 2 4
@@ -41,3 +42,24 @@ class Solution(object):
             ans.append(i)
         return ans     
                 
+
+# GFG Solution
+from heapq import*
+class Solution:
+	def topK(self, nums, k):
+		dict = {}
+        for i in nums:
+            if i in dict:
+                dict[i] += 1
+            else:
+                dict[i] = 1
+        min_heap = []
+        for i in dict.keys():
+            heappush(min_heap, (dict[i], i))
+            if len(min_heap) > k:
+                heappop(min_heap)
+        ans =[]
+        while min_heap:
+            c , i = heappop(min_heap)
+            ans.append(i)
+        return ans[::-1] 
