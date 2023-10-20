@@ -15,5 +15,5 @@ K = 2
 result = kLargest(A, N, K)
 print(result)
 
-// Output: [787, 23]
+# Output: [787, 23]
 
